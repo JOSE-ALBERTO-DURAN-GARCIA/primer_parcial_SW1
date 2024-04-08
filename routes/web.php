@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+   Route::get('/proyectos',[ProjectController::class, 'index'])->name('proyectos.index');
+   Route::get('/proyectos/create',[ProjectController::class, 'create'])->name('proyectos.create');
+   Route::get('/proyectos/{id}', [ProjectController::class, 'edit'])->name('proyectos.edit');
+   Route::post('/proyectos',[ProjectController::class, 'store'])->name('proyectos.store');
+   Route::put('/proyectos/{id}', [ProjectController::class, 'update'])->name('proyectos.update');
+   Route::delete('/proyectos/{id}',[ProjectController::class, 'destroy'])->name('proyectos.destroy');
+
+// Route::delete('/proyectos/{id}', [ProjectController::class, 'destroy'])->name('proyectos.destroy');

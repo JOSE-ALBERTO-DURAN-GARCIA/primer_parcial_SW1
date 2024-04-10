@@ -4,22 +4,24 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Project extends Model
+class Task extends Model
 {
     use HasFactory;
-      /**
+          /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
         'name',
-        'image',
+        'description',
+        'project_id',
     ];
-    public function tasks(): HasMany
+
+    public function project(): BelongsTo
     {
-        return $this->hasMany(Task::class);
+        return $this->belongsTo(Project::class);
     }
 }

@@ -30,9 +30,9 @@
                     </a>
     
     
-                    <a href="/products" class="{{ request()->path() == 'products' ? 'sidebar__menu--item sidebar__menu--active' : 'sidebar__menu--item'  }}">
+                    <a href="/tareas" class="{{ request()->path() == 'tareas' ? 'sidebar__menu--item sidebar__menu--active' : 'sidebar__menu--item'  }}">
                         <i class="uil uil-shopping-bag"></i>
-                        <span>Productos</span>
+                        <span>Tareas</span>
                     </a>
     
                     <a href="{{ route('proyectos.index') }}" class="{{ request()->path() == 'proyectos' ? 'sidebar__menu--item sidebar__menu--active' : 'sidebar__menu--item'  }}">

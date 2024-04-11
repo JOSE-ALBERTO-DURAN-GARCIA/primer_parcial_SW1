@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
         
         @vite('resources/css/app.css')
-        <title>Inicio de Sesion - Diagramador</title>
+        <title>Inicio de Sesion - software colaborativo</title>
 </head>
 <body>
     <main class="auth__container">
@@ -18,10 +18,16 @@
             <div class="mb-4 text-center">
                 @yield('header')
             </div>
+
+            @yield('content')
+
         </section>
+
         <section class="auth__logo">
             <h1>software colaborativo</h1>
         </section>
+
     </main>
 </body>
+
 </html>

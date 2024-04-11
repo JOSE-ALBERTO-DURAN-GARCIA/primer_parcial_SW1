@@ -12,6 +12,6 @@ class Authenticate extends Middleware
      */
     protected function redirectTo(Request $request): ?string
     {
-        return $request->expectsJson() ? null : route('login');
-    }
+        return $request->expectsJson() ? null : route('login.index'); //le aunmentamos el login.index
+    }        // nos va direccionar al login nuestro midelware no dejara entrar a las tareas
 }

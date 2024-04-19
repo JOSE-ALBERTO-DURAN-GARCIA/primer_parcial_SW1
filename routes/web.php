@@ -36,9 +36,14 @@ Route::middleware('auth')->group( function (){
 
   Route::resource('tareas', TaskController::class);
 
-  Route::resource('users', UserController::class);
+  
  
   Route::resource('starts', StartController::class);
+});
+
+Route::middleware(['auth', 'role.admin'])->group(function(){
+  
+     Route::resource('users', UserController::class);
 });
 
 

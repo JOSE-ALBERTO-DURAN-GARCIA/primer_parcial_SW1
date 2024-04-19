@@ -4,7 +4,9 @@ use App\Http\Controllers\InicioController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\StartController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,11 +35,14 @@ Route::middleware('auth')->group( function (){
    Route::delete('/proyectos/{id}',[ProjectController::class, 'destroy'])->name('proyectos.destroy');
 
   Route::resource('tareas', TaskController::class);
- 
 
+  Route::resource('users', UserController::class);
+ 
+  Route::resource('starts', StartController::class);
 });
 
 
    Route::resource('auth/login', LoginController::class)->only(['index', 'store']);
+  
    
    Route::resource('auth/logout', LogoutController::class)->only(['store']);

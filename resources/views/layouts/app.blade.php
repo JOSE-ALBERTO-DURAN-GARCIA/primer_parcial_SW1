@@ -26,7 +26,7 @@
                 </div>
                 {{-- {{ auth()->user()->role }} --}}
                 <ul class="sidebar__menu">
-                    <a href="/" class="{{ request()->path() == '/' ? 'sidebar__menu--item sidebar__menu--active' : 'sidebar__menu--item'  }}">
+                    <a href="/starts" class="{{ request()->path() == 'starts' ? 'sidebar__menu--item sidebar__menu--active' : 'sidebar__menu--item'  }}">
                         <i class="uil uil-estate"></i>
                         <span>Inicio</span>
                     </a>

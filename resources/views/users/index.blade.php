@@ -29,7 +29,7 @@ description="Gestion de usuarios "/>
                             <p>{{ $user->role->name }}</p>
 
                             <div class="flex items-center gap-4">
-                                <a href="" class="btn-primary-icon">
+                                <a href="{{ route('users.edit', $user->id) }}" class="btn-primary-icon">
                                    <i class="uil uil-pen"></i>   {{-- icono de editar --}}
                                 </a>
 

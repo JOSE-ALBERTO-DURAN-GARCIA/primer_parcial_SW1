@@ -55,7 +55,9 @@ class TaskController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        // $tareas = Task::all(); 
+        $task = Task::find($id);
+        return view('tareas.edit', compact('task'));
     }
 
     /**
@@ -63,7 +65,14 @@ class TaskController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // dd($request);
+        $task = Task::find($id); 
+        $task->name = $request->name;
+        $task->description = $request->description;
+        // $task->project_id = $request->project_id; //ver como hacer que deje editar el id project
+        $task->save();
+
+        return redirect('/tareas');
     }
 
     /**

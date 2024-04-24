@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BoardController;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
@@ -39,6 +40,7 @@ Route::middleware('auth')->group( function (){
   
  
   Route::resource('starts', StartController::class);
+  Route::resource('boards', BoardController::class);
 });
 
 Route::middleware(['auth', 'role.admin'])->group(function(){

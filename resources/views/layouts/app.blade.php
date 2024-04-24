@@ -30,6 +30,11 @@
                         <i class="uil uil-estate"></i>
                         <span>Inicio</span>
                     </a>
+
+                    <a href="/boards" class="{{ request()->path() == 'boards' ? 'sidebar__menu--item sidebar__menu--active' : 'sidebar__menu--item'  }}">
+                        <i class="uil uil-presentation-plus"></i>
+                        <span>Pizarra</span>
+                    </a>
     
     
                     <a href="/tareas" class="{{ request()->path() == 'tareas' ? 'sidebar__menu--item sidebar__menu--active' : 'sidebar__menu--item'  }}">
